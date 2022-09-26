@@ -1,0 +1,56 @@
+# Testing my REST endpoints
+### Just the main page
+GET http://localhost:7500 HTTP/1.1
+Content-Type: application/json
+
+### Get all Notes
+GET http://localhost:7500/notes HTTP/1.1
+Content-Type: application/json
+
+### Get a specific Note
+# GET http://localhost:7500/notes/:id HTTP/1.1
+GET http://localhost:7500/note/6320e003b375abed1f24eab2 HTTP/1.1
+Content-Type: application/json
+
+### Add first note
+POST http://localhost:7500/note HTTP/1.1
+content-type: application/json
+
+{
+    "title": "my first note",
+    "body": "The great body of the first note"
+}
+### Add second note
+POST http://localhost:7500/note HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "my second note",
+    "body": "The greater body of the second note"
+}
+### Add third note
+POST http://localhost:7500/note HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "my third note",
+    "body": "The greatest body of the third note"
+}
+
+###
+PUT http://localhost:7500/note/6321024090cecb1d7227a566 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Things have really changed",
+    "body": "you just never note..."
+}
+
+###
+DELETE http://localhost:7500/note/6320e00eb375abed1f24eab3 HTTP/1.1
+Content-Type: application/json
+
+###
+DELETE http://localhost:7500/notes HTTP/1.1
+Content-Type: application/json
+
